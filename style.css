@@ -33,6 +33,15 @@
     url(fonts/IBMPlexMono-Regular.woff2) format(woff2);
 }
 
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 body {
   font-family: "IBM-Plex", monospace;
   font-size: 16px;
@@ -119,7 +128,6 @@ div.content-container {
 
 div.content {
   width: 30%;
-  margin-left: 4rem;
 }
 
 button {
@@ -133,6 +141,22 @@ button {
   padding: 1rem 2rem;
   border-radius: 5px;
   box-shadow: 5px 5px 2px 1px rgba(51, 51, 51, 0.2);
+}
+
+.slides {
+  position: relative;
+  width: 40%;
+  height: 475px;
+}
+.slides img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slides img:first-child {
+  z-index: 1;
 }
 
 /******************************************
