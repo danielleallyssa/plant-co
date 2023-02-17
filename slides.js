@@ -41,8 +41,12 @@ slideArea.addEventListener("click", function () {
 slideArea.addEventListener("mouseover", function () {
   images.forEach((image) => {
     //creating random values to be used for x and y
-    const xAxis = 100 * Math.random() - 50;
-    const yAxis = 100 * Math.random() - 50;
+
+    // gives more structure to the numbers that can be pulled
+    const randomNum = 25 * Math.floor(Math.random() * 5) - 50;
+
+    const xAxis = randomNum;
+    const yAxis = randomNum;
 
     image.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
   });
